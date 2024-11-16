@@ -23,7 +23,7 @@ public class MainFrame extends JFrame implements ActionListener {
     int ySize;
 
     public MainFrame() {
-        flowLayout.setAlignment(FlowLayout.LEFT);
+        flowLayout.setAlignment(FlowLayout.CENTER);
 
         // X coordinate panel
         JPanel xPanel = new JPanel();
@@ -37,7 +37,8 @@ public class MainFrame extends JFrame implements ActionListener {
         xTextField.addActionListener(this);
         xPanel.add(xTextField);
 
-        xPanel.add(new JLabel("x px"));
+        JLabel xLabel = new JLabel("px (x-axis)");
+        xPanel.add(xLabel);
 
         // Y coordinate panel
         JPanel yPanel = new JPanel();
@@ -51,7 +52,7 @@ public class MainFrame extends JFrame implements ActionListener {
         yTextField.addActionListener(this);
         yPanel.add(yTextField);
 
-        yPanel.add(new JLabel("y px"));
+        yPanel.add(new JLabel("px (y-axis)"));
 
         // Checkbox panel
         JPanel checkPanel = new JPanel();
