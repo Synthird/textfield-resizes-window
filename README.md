@@ -4,7 +4,7 @@ Resizing a window via textfield/textbox.
 
 ## Download/Installation
 
-You can download a version in the [releases page](#).
+You can download a version in the [releases page](https://github.com/Synthird/Textfield-resizes-window/releases).
 
 ### Opening the exe in the zip folder (Windows only)
 
