@@ -24,7 +24,6 @@ public class MainFrame extends JFrame implements ActionListener {
 
     public MainFrame() {
         flowLayout.setAlignment(FlowLayout.LEFT);
-        ;
 
         // X coordinate panel
         JPanel xPanel = new JPanel();
@@ -38,8 +37,7 @@ public class MainFrame extends JFrame implements ActionListener {
         xTextField.addActionListener(this);
         xPanel.add(xTextField);
 
-        JLabel xLabel = new JLabel("x px");
-        xPanel.add(xLabel);
+        xPanel.add(new JLabel("x px"));
 
         // Y coordinate panel
         JPanel yPanel = new JPanel();
@@ -53,8 +51,7 @@ public class MainFrame extends JFrame implements ActionListener {
         yTextField.addActionListener(this);
         yPanel.add(yTextField);
 
-        JLabel yLabel = new JLabel("y px");
-        yPanel.add(yLabel);
+        yPanel.add(new JLabel("y px"));
 
         // Checkbox panel
         JPanel checkPanel = new JPanel();
