@@ -23,7 +23,7 @@ public class MainFrame extends JFrame implements ActionListener {
     int ySize;
 
     public MainFrame() {
-        flowLayout.setAlignment(FlowLayout.CENTER);
+        flowLayout.setAlignment(FlowLayout.LEFT);
 
         // X coordinate panel
         JPanel xPanel = new JPanel();
