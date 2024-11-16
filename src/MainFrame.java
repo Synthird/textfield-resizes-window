@@ -95,6 +95,7 @@ public class MainFrame extends JFrame implements ActionListener {
             try {
                 xSize = Integer.parseInt(xTextField.getText().replaceAll("\\s", ""));
                 ySize = Integer.parseInt(yTextField.getText().replaceAll("\\s", ""));
+
                 this.setSize(xSize, ySize);
             } catch (Exception exception) {
                 JOptionPane.showMessageDialog(null,
