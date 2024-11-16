@@ -14,6 +14,9 @@ import javax.swing.JTextField;
 public class MainFrame extends JFrame implements ActionListener {
     private static FlowLayout flowLayout = new FlowLayout();
 
+    private static int minWidth = 330;
+    private static int minHeight = 180;
+
     JTextField xTextField;
     JTextField yTextField;
     JCheckBox resizable;
@@ -37,7 +40,7 @@ public class MainFrame extends JFrame implements ActionListener {
         xTextField.addActionListener(this);
         xPanel.add(xTextField);
 
-        JLabel xLabel = new JLabel("px (Width)");
+        JLabel xLabel = new JLabel(String.format("px (Width) Minimum is %s", minWidth));
         xPanel.add(xLabel);
 
         // Y coordinate panel
@@ -52,7 +55,8 @@ public class MainFrame extends JFrame implements ActionListener {
         yTextField.addActionListener(this);
         yPanel.add(yTextField);
 
-        yPanel.add(new JLabel("px (Height)"));
+        JLabel yLabel = new JLabel(String.format("px (Height) Minimum is %s", minHeight));
+        yPanel.add(yLabel);
 
         // Checkbox panel
         JPanel checkPanel = new JPanel();
@@ -80,7 +84,7 @@ public class MainFrame extends JFrame implements ActionListener {
         buttonPanel.add(resizeButton);
 
         this.setTitle("Textfield resizes window");
-        this.setSize(330, 180);
+        this.setSize(minWidth, minHeight);
         this.setMinimumSize(this.getSize());
         this.setResizable(false);
         this.setLayout(null);
@@ -99,7 +103,7 @@ public class MainFrame extends JFrame implements ActionListener {
                 this.setSize(xSize, ySize);
             } catch (Exception exception) {
                 JOptionPane.showMessageDialog(null,
-                        "Your textfields/textboxes cannot be empty nor should they have any words or symbols!",
+                        "Textfields/textboxes cannot be empty nor should they have any words or symbols!",
                         "Cannot resize", JOptionPane.ERROR_MESSAGE);
             }
         } else if (e.getSource() == resizable) {
