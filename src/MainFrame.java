@@ -99,6 +99,7 @@ public class MainFrame extends JFrame implements ActionListener {
                     int chooseToResize = JOptionPane.showConfirmDialog(null,
                             "Your checkbox is going to be covered since you did not allow this window to be resizable via mouse and maximize button!\nDo you want to resize the window anyway?",
                             "Cannot resize window when choosing to confirm", JOptionPane.YES_NO_OPTION);
+
                     if (chooseToResize == 0) {
                         this.setSize(xSize, ySize);
                     }
@@ -114,5 +115,4 @@ public class MainFrame extends JFrame implements ActionListener {
             this.setResizable(!this.isResizable());
         }
     }
-
 }
