@@ -1,6 +1,6 @@
 # Resize window from textfield
 
-Resizing a window by entering an integer into the textfields/textboxes.
+Resizing a GUI window by entering an integer into the textfields/textboxes.
 
 ## Download/Installation
 
