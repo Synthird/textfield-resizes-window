@@ -103,7 +103,7 @@ public class MainFrame extends JFrame implements ActionListener {
                 this.setSize(xSize, ySize);
             } catch (Exception exception) {
                 JOptionPane.showMessageDialog(null,
-                        "Textfields/textboxes cannot be empty nor should they have any words or symbols!",
+                        "Textfields/textboxes cannot be empty nor should they have any letters or symbols!",
                         "Cannot resize", JOptionPane.ERROR_MESSAGE);
             }
         } else if (e.getSource() == resizable) {
