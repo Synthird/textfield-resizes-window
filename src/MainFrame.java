@@ -37,7 +37,7 @@ public class MainFrame extends JFrame implements ActionListener {
         xTextField.addActionListener(this);
         xPanel.add(xTextField);
 
-        JLabel xLabel = new JLabel("px (x-axis)");
+        JLabel xLabel = new JLabel("px (width)");
         xPanel.add(xLabel);
 
         // Y coordinate panel
@@ -52,7 +52,7 @@ public class MainFrame extends JFrame implements ActionListener {
         yTextField.addActionListener(this);
         yPanel.add(yTextField);
 
-        yPanel.add(new JLabel("px (y-axis)"));
+        yPanel.add(new JLabel("px (height)"));
 
         // Checkbox panel
         JPanel checkPanel = new JPanel();
@@ -81,6 +81,7 @@ public class MainFrame extends JFrame implements ActionListener {
 
         this.setTitle("Textfield resizes window");
         this.setSize(330, 180);
+        this.setMinimumSize(this.getSize());
         this.setResizable(false);
         this.setLayout(null);
         this.setLocationRelativeTo(null);
@@ -94,17 +95,7 @@ public class MainFrame extends JFrame implements ActionListener {
             try {
                 xSize = Integer.parseInt(xTextField.getText().replaceAll("\\s", ""));
                 ySize = Integer.parseInt(yTextField.getText().replaceAll("\\s", ""));
-                if (ySize < 135 && !this.isResizable()) {
-                    int chooseToResize = JOptionPane.showConfirmDialog(null,
-                            String.format("%s is not ticked!\nDo you want to resize anyway?", resizable.getText()),
-                            "Y-axis is too small!", JOptionPane.YES_NO_OPTION);
-
-                    if (chooseToResize == 0) {
-                        this.setSize(xSize, ySize);
-                    }
-                } else {
-                    this.setSize(xSize, ySize);
-                }
+                this.setSize(xSize, ySize);
             } catch (Exception exception) {
                 JOptionPane.showMessageDialog(null,
                         "Your textfields/textboxes cannot be empty nor should they have any words or symbols!",
