@@ -97,7 +97,7 @@ public class MainFrame extends JFrame implements ActionListener {
                 if (ySize < 135 && !this.isResizable()) {
                     int chooseToResize = JOptionPane.showConfirmDialog(null,
                             "Resizable via mouse and maximize/restore button is not ticked!\nDo you want to resize the window anyway?",
-                            "Cannot resize window when choosing to confirm", JOptionPane.YES_NO_OPTION);
+                            "Y-axis is too small!", JOptionPane.YES_NO_OPTION);
 
                     if (chooseToResize == 0) {
                         this.setSize(xSize, ySize);
