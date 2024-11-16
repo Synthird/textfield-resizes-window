@@ -37,7 +37,7 @@ public class MainFrame extends JFrame implements ActionListener {
         xTextField.addActionListener(this);
         xPanel.add(xTextField);
 
-        JLabel xLabel = new JLabel("px (width)");
+        JLabel xLabel = new JLabel("px (Width)");
         xPanel.add(xLabel);
 
         // Y coordinate panel
@@ -52,7 +52,7 @@ public class MainFrame extends JFrame implements ActionListener {
         yTextField.addActionListener(this);
         yPanel.add(yTextField);
 
-        yPanel.add(new JLabel("px (height)"));
+        yPanel.add(new JLabel("px (Height)"));
 
         // Checkbox panel
         JPanel checkPanel = new JPanel();
