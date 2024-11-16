@@ -23,13 +23,14 @@ public class MainFrame extends JFrame implements ActionListener {
     int ySize;
 
     public MainFrame() {
-        flowLayout.setAlignment(FlowLayout.LEFT);;
+        flowLayout.setAlignment(FlowLayout.LEFT);
+        ;
 
         // X coordinate panel
         JPanel xPanel = new JPanel();
         xPanel.setOpaque(false);
         xPanel.setLayout(flowLayout);
-        xPanel.setBounds(0,0,250, 35);
+        xPanel.setBounds(0, 0, 250, 35);
         this.add(xPanel);
 
         xTextField = new JTextField();
@@ -95,12 +96,19 @@ public class MainFrame extends JFrame implements ActionListener {
                 xSize = Integer.parseInt(xTextField.getText().replaceAll("\\s", ""));
                 ySize = Integer.parseInt(yTextField.getText().replaceAll("\\s", ""));
                 if (ySize < 135 && !this.isResizable()) {
-                    int chooseToResize = JOptionPane.showConfirmDialog(null, "Your checkbox is going to be covered and you did not set this window to be resizable via mouse", "Cannot resize window when choosing to confirm", JOptionPane.WARNING_MESSAGE);
-                    System.out.println(chooseToResize);
+                    int chooseToResize = JOptionPane.showConfirmDialog(null,
+                            "Your checkbox is going to be covered since you did not allow this window to be resizable via mouse and maximize button!\nDo you want to resize the window anyway?",
+                            "Cannot resize window when choosing to confirm", JOptionPane.YES_NO_OPTION);
+                    if (chooseToResize == 0) {
+                        this.setSize(xSize, ySize);
+                    }
+                } else {
+                    this.setSize(xSize, ySize);
                 }
-                this.setSize(xSize, ySize);
             } catch (Exception exception) {
-                JOptionPane.showMessageDialog(null, "Your textfields/textboxes cannot be empty nor should they have any words or symbols!", "Cannot resize", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null,
+                        "Your textfields/textboxes cannot be empty nor should they have any words or symbols!",
+                        "Cannot resize", JOptionPane.ERROR_MESSAGE);
             }
         } else if (e.getSource() == resizable) {
             this.setResizable(!this.isResizable());
