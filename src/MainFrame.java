@@ -79,7 +79,7 @@ public class MainFrame extends JFrame implements ActionListener {
         resizeButton.addActionListener(this);
         buttonPanel.add(resizeButton);
 
-        this.setTitle("textfield resizes window");
+        this.setTitle("Textfield resizes window");
         this.setSize(330, 180);
         this.setResizable(false);
         this.setLayout(null);
