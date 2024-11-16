@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class MainFrame extends JFrame implements ActionListener {
-    private static FlowLayout flowLayout = new FlowLayout();
+    FlowLayout flowLayout = new FlowLayout();
 
     private static int minWidth = 330;
     private static int minHeight = 180;
