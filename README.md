@@ -14,7 +14,7 @@ You can download a version in the [releases page](https://github.com/Synthird/Te
     - Click "More info"
     - Click "Run anyway"
 
-This is not a virus so it is safe to install.
+This is safe to install.
 
 ### Opening the jar file
 
