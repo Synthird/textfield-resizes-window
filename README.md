@@ -14,6 +14,8 @@ You can download a version in the [releases page](https://github.com/Synthird/Te
     - Click "More info"
     - Click "Run anyway"
 
+This is not a virus so it is safe to install.
+
 ### Opening the jar file
 
 You need an openJDK to open the jar file. Here are a couple ones to choose:
