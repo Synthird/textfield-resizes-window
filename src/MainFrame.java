@@ -24,41 +24,41 @@ public class MainFrame extends JFrame implements ActionListener {
     JButton resizeButton;
     JButton exitButton;
 
-    int xSize;
-    int ySize;
+    int widthSize;
+    int heightSize;
 
     public MainFrame() {
         flowLayout.setAlignment(FlowLayout.LEFT);
 
-        // X coordinate panel
-        JPanel xPanel = new JPanel();
-        xPanel.setOpaque(false);
-        xPanel.setLayout(flowLayout);
-        xPanel.setBounds(0, 0, 250, 35);
-        this.add(xPanel);
+        // Width panel
+        JPanel widthPanel = new JPanel();
+        widthPanel.setOpaque(false);
+        widthPanel.setLayout(flowLayout);
+        widthPanel.setBounds(0, 0, 250, 35);
+        this.add(widthPanel);
 
         xTextField = new JTextField();
         xTextField.setPreferredSize(new Dimension(50, 26));
         xTextField.addActionListener(this);
-        xPanel.add(xTextField);
+        widthPanel.add(xTextField);
 
         JLabel xLabel = new JLabel(String.format("px (Width) Minimum is %s", minWidth));
-        xPanel.add(xLabel);
+        widthPanel.add(xLabel);
 
-        // Y coordinate panel
-        JPanel yPanel = new JPanel();
-        yPanel.setOpaque(false);
-        yPanel.setLayout(flowLayout);
-        yPanel.setBounds(0, 35, 250, 35);
-        this.add(yPanel);
+        // Height panel
+        JPanel heightPanel = new JPanel();
+        heightPanel.setOpaque(false);
+        heightPanel.setLayout(flowLayout);
+        heightPanel.setBounds(0, 35, 250, 35);
+        this.add(heightPanel);
 
         yTextField = new JTextField();
         yTextField.setPreferredSize(new Dimension(50, 26));
         yTextField.addActionListener(this);
-        yPanel.add(yTextField);
+        heightPanel.add(yTextField);
 
         JLabel yLabel = new JLabel(String.format("px (Height) Minimum is %s", minHeight));
-        yPanel.add(yLabel);
+        heightPanel.add(yLabel);
 
         // Checkbox panel
         JPanel checkPanel = new JPanel();
@@ -103,10 +103,10 @@ public class MainFrame extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == resizeButton || e.getSource() == xTextField || e.getSource() == yTextField) {
             try {
-                xSize = Integer.parseInt(xTextField.getText().replaceAll("\\s", ""));
-                ySize = Integer.parseInt(yTextField.getText().replaceAll("\\s", ""));
+                widthSize = Integer.parseInt(xTextField.getText().replaceAll("\\s", ""));
+                heightSize = Integer.parseInt(yTextField.getText().replaceAll("\\s", ""));
 
-                this.setSize(xSize, ySize);
+                this.setSize(widthSize, heightSize);
             } catch (Exception exception) {
                 JOptionPane.showMessageDialog(null,
                         String.format(
