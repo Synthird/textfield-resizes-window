@@ -17,8 +17,8 @@ public class MainFrame extends JFrame implements ActionListener {
 
     FlowLayout flowLayout = new FlowLayout();
 
-    JTextField xTextField;
-    JTextField yTextField;
+    JTextField widthTextField;
+    JTextField heightTextField;
     
     JCheckBox resizable;
 
@@ -37,9 +37,9 @@ public class MainFrame extends JFrame implements ActionListener {
         widthPanel.setBounds(0, 0, 250, 35);
         setUpPanel(widthPanel);
 
-        xTextField = new JTextField();
-        setUpTextField(xTextField);
-        widthPanel.add(xTextField);
+        widthTextField = new JTextField();
+        setUpTextField(widthTextField);
+        widthPanel.add(widthTextField);
 
         JLabel xLabel = new JLabel(String.format("px (Width) Minimum is %s", minWidth));
         widthPanel.add(xLabel);
@@ -49,9 +49,9 @@ public class MainFrame extends JFrame implements ActionListener {
         heightPanel.setBounds(0, 35, 250, 35);
         setUpPanel(heightPanel);
 
-        yTextField = new JTextField();
-        setUpTextField(yTextField);
-        heightPanel.add(yTextField);
+        heightTextField = new JTextField();
+        setUpTextField(heightTextField);
+        heightPanel.add(heightTextField);
 
         JLabel yLabel = new JLabel(String.format("px (Height) Minimum is %s", minHeight));
         heightPanel.add(yLabel);
@@ -90,10 +90,10 @@ public class MainFrame extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == resizeButton || e.getSource() == xTextField || e.getSource() == yTextField) {
+        if (e.getSource() == resizeButton || e.getSource() == widthTextField || e.getSource() == heightTextField) {
             try {
-                widthSize = Integer.parseInt(xTextField.getText().replaceAll("\\s", ""));
-                heightSize = Integer.parseInt(yTextField.getText().replaceAll("\\s", ""));
+                widthSize = Integer.parseInt(widthTextField.getText().replaceAll("\\s", ""));
+                heightSize = Integer.parseInt(heightTextField.getText().replaceAll("\\s", ""));
 
                 this.setSize(widthSize, heightSize);
             } catch (Exception exception) {
