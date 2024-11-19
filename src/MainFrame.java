@@ -19,6 +19,7 @@ public class MainFrame extends JFrame implements ActionListener {
 
     JTextField xTextField;
     JTextField yTextField;
+    
     JCheckBox resizable;
 
     JPanel buttonPanel;
@@ -33,14 +34,11 @@ public class MainFrame extends JFrame implements ActionListener {
 
         // Width panel
         JPanel widthPanel = new JPanel();
-        widthPanel.setOpaque(false);
-        widthPanel.setLayout(flowLayout);
         widthPanel.setBounds(0, 0, 250, 35);
-        this.add(widthPanel);
+        setUpPanel(widthPanel);
 
         xTextField = new JTextField();
-        xTextField.setPreferredSize(new Dimension(50, 26));
-        xTextField.addActionListener(this);
+        setUpTextField(xTextField);
         widthPanel.add(xTextField);
 
         JLabel xLabel = new JLabel(String.format("px (Width) Minimum is %s", minWidth));
@@ -48,14 +46,11 @@ public class MainFrame extends JFrame implements ActionListener {
 
         // Height panel
         JPanel heightPanel = new JPanel();
-        heightPanel.setOpaque(false);
-        heightPanel.setLayout(flowLayout);
         heightPanel.setBounds(0, 35, 250, 35);
-        this.add(heightPanel);
+        setUpPanel(heightPanel);
 
         yTextField = new JTextField();
-        yTextField.setPreferredSize(new Dimension(50, 26));
-        yTextField.addActionListener(this);
+        setUpTextField(yTextField);
         heightPanel.add(yTextField);
 
         JLabel yLabel = new JLabel(String.format("px (Height) Minimum is %s", minHeight));
@@ -64,9 +59,7 @@ public class MainFrame extends JFrame implements ActionListener {
         // Checkbox panel
         JPanel checkPanel = new JPanel();
         checkPanel.setBounds(0, 35 * 2, 310, 35);
-        checkPanel.setOpaque(false);
-        checkPanel.setLayout(flowLayout);
-        this.add(checkPanel);
+        setUpPanel(checkPanel);
 
         resizable = new JCheckBox("Resizable via mouse and maximize/restore button");
         resizable.setFocusable(false);
@@ -76,17 +69,14 @@ public class MainFrame extends JFrame implements ActionListener {
 
         // Button panel
         buttonPanel = new JPanel();
-        buttonPanel.setLayout(flowLayout);
         buttonPanel.setBounds(0, 35 * 3, 250, 35);
-        this.add(buttonPanel);
+        setUpPanel(buttonPanel);
 
         resizeButton = new JButton("Resize");
         setUpButton(resizeButton);
-        buttonPanel.add(resizeButton);
 
         exitButton = new JButton("Exit");
         setUpButton(exitButton);
-        buttonPanel.add(exitButton);
 
         this.setTitle("Textfield resizes window");
         this.setSize(minWidth, minHeight);
@@ -120,9 +110,20 @@ public class MainFrame extends JFrame implements ActionListener {
         }
     }
 
+    private void setUpTextField(JTextField textField) {
+        textField.setPreferredSize(new Dimension(50, 26));
+        textField.addActionListener(this);
+    }
+
     private void setUpButton(JButton button) {
         button.setFocusable(false);
         button.addActionListener(this);
         buttonPanel.add(button);
+    }
+
+    private void setUpPanel(JPanel panel) {
+        panel.setOpaque(false);
+        panel.setLayout(flowLayout);
+        this.add(panel);
     }
 }
