@@ -41,8 +41,8 @@ public class MainFrame extends JFrame implements ActionListener {
         setUpTextField(widthTextField);
         widthPanel.add(widthTextField);
 
-        JLabel xLabel = new JLabel(String.format("px (Width) Minimum is %s", minWidth));
-        widthPanel.add(xLabel);
+        JLabel widthLabel = new JLabel(String.format("px (Width) Minimum is %s", minWidth));
+        widthPanel.add(widthLabel);
 
         // Height panel
         JPanel heightPanel = new JPanel();
@@ -53,8 +53,8 @@ public class MainFrame extends JFrame implements ActionListener {
         setUpTextField(heightTextField);
         heightPanel.add(heightTextField);
 
-        JLabel yLabel = new JLabel(String.format("px (Height) Minimum is %s", minHeight));
-        heightPanel.add(yLabel);
+        JLabel heightLabel = new JLabel(String.format("px (Height) Minimum is %s", minHeight));
+        heightPanel.add(heightLabel);
 
         // Checkbox panel
         JPanel checkPanel = new JPanel();
