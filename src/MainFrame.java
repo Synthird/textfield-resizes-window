@@ -106,6 +106,8 @@ public class MainFrame extends JFrame implements ActionListener {
         }
     }
 
+    // Setting up GUIs
+
     private void setUpTextField(JTextField textField) {
         textField.setPreferredSize(new Dimension(50, 26));
         textField.addActionListener(this);
