@@ -19,7 +19,7 @@ public class MainFrame extends JFrame implements ActionListener {
 
     JTextField widthTextField;
     JTextField heightTextField;
-    
+
     JCheckBox resizable;
 
     JPanel buttonPanel;
