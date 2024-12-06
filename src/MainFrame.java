@@ -33,24 +33,21 @@ public class MainFrame extends JFrame implements ActionListener {
         flowLayout.setAlignment(FlowLayout.LEFT);
 
         // Width panel
-        JPanel widthPanel = new JPanel();
+        JPanel widthPanel = setUpPanel(0);
         widthTextField = setUpTextField(widthPanel);
-        setUpPanel(widthPanel, 0);
 
         JLabel widthLabel = new JLabel(String.format("px (Width) Minimum is %s", minWidth));
         widthPanel.add(widthLabel);
 
         // Height panel
-        JPanel heightPanel = new JPanel();
+        JPanel heightPanel = setUpPanel(1);
         heightTextField = setUpTextField(heightPanel);
-        setUpPanel(heightPanel, 1);
 
         JLabel heightLabel = new JLabel(String.format("px (Height) Minimum is %s", minHeight));
         heightPanel.add(heightLabel);
 
         // Checkbox panel
-        JPanel checkPanel = new JPanel();
-        setUpPanel(checkPanel, 2);
+        JPanel checkPanel = setUpPanel(2);
 
         resizable = new JCheckBox("Resizable via mouse and maximize/restore button");
         resizable.setFocusable(false);
@@ -59,8 +56,7 @@ public class MainFrame extends JFrame implements ActionListener {
         checkPanel.add(resizable);
 
         // Button panel
-        buttonPanel = new JPanel();
-        setUpPanel(buttonPanel, 3);
+        buttonPanel = setUpPanel(3);
 
         resizeButton = setUpButton("Resize");
         exitButton = setUpButton("Exit");
@@ -116,10 +112,12 @@ public class MainFrame extends JFrame implements ActionListener {
         return button;
     }
 
-    private void setUpPanel(JPanel panel, int level) {
+    private JPanel setUpPanel(int level) {
+        JPanel panel = new JPanel();
         panel.setOpaque(false);
         panel.setBounds(0, 35 * level, 250, 35);
         panel.setLayout(flowLayout);
         this.add(panel);
+        return panel;
     }
 }
