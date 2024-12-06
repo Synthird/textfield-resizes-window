@@ -66,11 +66,8 @@ public class MainFrame extends JFrame implements ActionListener {
         buttonPanel = new JPanel();
         setUpPanel(buttonPanel, 3);
 
-        resizeButton = new JButton("Resize");
-        setUpButton(resizeButton);
-
-        exitButton = new JButton("Exit");
-        setUpButton(exitButton);
+        resizeButton = setUpButton("Resize");
+        exitButton = setUpButton("Exit");
 
         this.setTitle("Textfield resizes window");
         this.setSize(minWidth, minHeight);
@@ -112,10 +109,12 @@ public class MainFrame extends JFrame implements ActionListener {
         panel.add(textField);
     }
 
-    private void setUpButton(JButton button) {
+    private JButton setUpButton(String text) {
+        JButton button = new JButton(text);
         button.setFocusable(false);
         button.addActionListener(this);
         buttonPanel.add(button);
+        return button;
     }
 
     private void setUpPanel(JPanel panel, int level) {
