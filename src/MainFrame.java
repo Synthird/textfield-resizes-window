@@ -37,8 +37,7 @@ public class MainFrame extends JFrame implements ActionListener {
         setUpPanel(widthPanel, 0);
 
         widthTextField = new JTextField();
-        setUpTextField(widthTextField);
-        widthPanel.add(widthTextField);
+        setUpTextField(widthTextField, widthPanel);
 
         JLabel widthLabel = new JLabel(String.format("px (Width) Minimum is %s", minWidth));
         widthPanel.add(widthLabel);
@@ -48,8 +47,7 @@ public class MainFrame extends JFrame implements ActionListener {
         setUpPanel(heightPanel, 1);
 
         heightTextField = new JTextField();
-        setUpTextField(heightTextField);
-        heightPanel.add(heightTextField);
+        setUpTextField(heightTextField, heightPanel);
 
         JLabel heightLabel = new JLabel(String.format("px (Height) Minimum is %s", minHeight));
         heightPanel.add(heightLabel);
@@ -108,9 +106,10 @@ public class MainFrame extends JFrame implements ActionListener {
 
     // Setting up GUIs that have the same properties
 
-    private void setUpTextField(JTextField textField) {
+    private void setUpTextField(JTextField textField, JPanel panel) {
         textField.setPreferredSize(new Dimension(50, 26));
         textField.addActionListener(this);
+        panel.add(textField);
     }
 
     private void setUpButton(JButton button) {
