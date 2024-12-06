@@ -17,8 +17,6 @@ public class MainFrame extends JFrame implements ActionListener {
 
     FlowLayout flowLayout = new FlowLayout();
 
-    // GUI variables
-
     JTextField widthTextField;
     JTextField heightTextField;
 
