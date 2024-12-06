@@ -69,6 +69,7 @@ public class MainFrame extends JFrame implements ActionListener {
         resizeButton = setUpButton("Resize");
         exitButton = setUpButton("Exit");
 
+        // Window set up
         this.setTitle("Textfield resizes window");
         this.setSize(minWidth, minHeight);
         this.setMinimumSize(this.getSize());
