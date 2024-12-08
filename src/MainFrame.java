@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
@@ -12,7 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class MainFrame extends JFrame implements ActionListener {
-    final int minWidth = 330;
+    final int minWidth = 394;
     final int minHeight = 180;
 
     FlowLayout flowLayout = new FlowLayout();
@@ -36,14 +37,14 @@ public class MainFrame extends JFrame implements ActionListener {
         JPanel widthPanel = setUpPanel(0);
         widthTextField = setUpTextField(widthPanel);
 
-        JLabel widthLabel = new JLabel(String.format("px (Width) Minimum is %s", minWidth));
+        JLabel widthLabel = new JLabel(String.format("px (Width) | minimum is %s, maximum is %s", minWidth, Integer.MAX_VALUE));
         widthPanel.add(widthLabel);
 
         // Height panel
         JPanel heightPanel = setUpPanel(1);
         heightTextField = setUpTextField(heightPanel);
 
-        JLabel heightLabel = new JLabel(String.format("px (Height) Minimum is %s", minHeight));
+        JLabel heightLabel = new JLabel(String.format("px (Height) | minimum is %s, maximum is %s", minHeight, Integer.MAX_VALUE));
         heightPanel.add(heightLabel);
 
         // Checkbox panel
@@ -85,7 +86,7 @@ public class MainFrame extends JFrame implements ActionListener {
                         String.format(
                                 "Textfields/textboxes cannot be empty! They also cannot contain any letters, decimals, symbols, or a number larger than %s!",
                                 Integer.MAX_VALUE),
-                        "Cannot resize", JOptionPane.ERROR_MESSAGE);
+                        "CANNOT RESIZE", JOptionPane.ERROR_MESSAGE);
             }
         } else if (e.getSource() == resizable) {
             this.setResizable(!this.isResizable());
@@ -115,7 +116,7 @@ public class MainFrame extends JFrame implements ActionListener {
     private JPanel setUpPanel(int level) {
         JPanel panel = new JPanel();
         panel.setOpaque(false);
-        panel.setBounds(0, 35 * level, 250, 35);
+        panel.setBounds(0, 35 * level, 385, 35);
         panel.setLayout(flowLayout);
         this.add(panel);
         return panel;
