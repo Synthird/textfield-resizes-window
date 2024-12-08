@@ -48,7 +48,7 @@ public class MainFrame extends JFrame implements ActionListener {
                 String.format("px (Height) | minimum is %s, maximum is %s", minHeight, Integer.MAX_VALUE));
         heightPanel.add(heightLabel);
 
-        // Checkbox panel
+        // Checkbox
         JPanel checkPanel = setUpPanel(2);
 
         resizable = new JCheckBox("Resizable via mouse and maximize/restore button");
@@ -57,7 +57,7 @@ public class MainFrame extends JFrame implements ActionListener {
         resizable.addActionListener(this);
         checkPanel.add(resizable);
 
-        // Button panel
+        // Buttons
         buttonPanel = setUpPanel(3);
 
         resizeButton = setUpButton("Resize");
