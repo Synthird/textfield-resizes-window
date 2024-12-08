@@ -85,7 +85,7 @@ public class MainFrame extends JFrame implements ActionListener {
             } catch (Exception exception) {
                 JOptionPane.showMessageDialog(null,
                         String.format(
-                                "Textfields/textboxes cannot be empty! They also cannot contain any letters, decimals, symbols, or a number larger than %s!",
+                                "Textfields/textboxes cannot be empty nor have any letters, decimals, symbols, or a number larger than %s!",
                                 Integer.MAX_VALUE),
                         "CANNOT RESIZE", JOptionPane.ERROR_MESSAGE);
             }
