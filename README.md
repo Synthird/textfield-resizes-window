@@ -30,7 +30,7 @@ You need an openJDK to open the jar file. Here are a couple ones to choose:
 - [Red Hat's openJDK](https://developers.redhat.com/products/openjdk/download)
 - [SapMachine](https://sap.github.io/SapMachine/)
 
-Once you downloaded an openJDK, download the jar file and open it.
+Once you installed an openJDK, download the jar file and open it.
 
 # License
 
