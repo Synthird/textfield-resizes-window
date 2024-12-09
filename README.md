@@ -10,7 +10,7 @@ You can download a version in the [releases page](https://github.com/Synthird/Te
 
 1. Download and unzip the zip folder
 3. Open the exe file
-4. If you get a warning saying the exe might be a virus
+4. If you get a pop-up saying the exe might be a virus
     - Click "More info"
     - Click "Run anyway"
 
