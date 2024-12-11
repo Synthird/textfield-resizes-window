@@ -1,4 +1,4 @@
-# Resize window from textfield
+# Textfield resizes window
 
 Resizing a GUI window by entering an integer into the textfields/textboxes.
 
