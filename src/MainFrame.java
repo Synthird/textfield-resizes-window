@@ -43,7 +43,7 @@ public class MainFrame extends JFrame implements ActionListener {
         JPanel heightPanel = setUpPanel(1);
         heightTextField = setUpTextField(heightPanel);
 
-        JLabel heightLabel = new JLabel(String.format(showMinAndMax("Height", minHeight)));
+        JLabel heightLabel = new JLabel(showMinAndMax("Height", minHeight));
         heightPanel.add(heightLabel);
 
         // Checkbox
