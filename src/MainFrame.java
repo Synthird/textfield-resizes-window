@@ -36,14 +36,14 @@ public class MainFrame extends JFrame implements ActionListener {
         JPanel widthPanel = setUpPanel(0);
         widthTextField = setUpTextField(widthPanel);
 
-        JLabel widthLabel = new JLabel(showMinAndMax("Width", minWidth));
+        JLabel widthLabel = new JLabel(showMinAndMaxLength("Width", minWidth));
         widthPanel.add(widthLabel);
 
         // Height panel
         JPanel heightPanel = setUpPanel(1);
         heightTextField = setUpTextField(heightPanel);
 
-        JLabel heightLabel = new JLabel(showMinAndMax("Height", minHeight));
+        JLabel heightLabel = new JLabel(showMinAndMaxLength("Height", minHeight));
         heightPanel.add(heightLabel);
 
         // Checkbox
@@ -121,7 +121,7 @@ public class MainFrame extends JFrame implements ActionListener {
         return panel;
     }
 
-    private String showMinAndMax(String length, int minimum) {
+    private String showMinAndMaxLength(String length, int minimum) {
         return String.format("px (%s) | minimum is %s, maximum is %s", length, minimum, Integer.MAX_VALUE);
     }
 }
