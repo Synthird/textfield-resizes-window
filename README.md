@@ -2,6 +2,9 @@
 
 Resizing a GUI window by entering an integer into the textfields/textboxes.
 
+[![Resize window screenshot](https://github.com/user-attachments/assets/4d25343f-045a-4907-8216-b8c7e3e117d2)](#)
+
+
 ## Download/Installation
 
 You can download a version in the [releases page](https://github.com/Synthird/Textfield-resizes-window/releases).
