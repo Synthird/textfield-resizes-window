@@ -49,7 +49,7 @@ public class MainFrame extends JFrame implements ActionListener {
         // Checkbox
         JPanel checkPanel = setUpPanel(2);
 
-        resizable = new JCheckBox("Resizable via mouse and maximize/restore button");
+        resizable = new JCheckBox("Resize with mouse and maximize/restore button");
         resizable.setFocusable(false);
         resizable.setOpaque(false);
         resizable.addActionListener(this);
@@ -79,11 +79,9 @@ public class MainFrame extends JFrame implements ActionListener {
                 widthSize = Integer.parseInt(widthTextField.getText().replaceAll("\\s", ""));
                 heightSize = Integer.parseInt(heightTextField.getText().replaceAll("\\s", ""));
             } catch (Exception exception) {
-                JOptionPane.showMessageDialog(null,
-                        String.format(
-                                "Textfields/textboxes cannot be empty nor have any letters, decimals, symbols, or a number larger than %s!",
-                                Integer.MAX_VALUE),
-                        "CANNOT RESIZE", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, String.format(
+                        "Empty textfields/textboxes, letters, decimals, symbols, or numbers larger than %s are not allowed!",
+                        Integer.MAX_VALUE), "CANNOT RESIZE", JOptionPane.ERROR_MESSAGE);
             } finally {
                 this.setSize(widthSize, heightSize);
             }
