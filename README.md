@@ -2,8 +2,7 @@
 
 Resizing a GUI window by entering an integer into the textfields/textboxes.
 
-[![Resize window GUI](https://github.com/user-attachments/assets/4d25343f-045a-4907-8216-b8c7e3e117d2)](#)
-
+[![Updated textfield resizes window screenshot](https://github.com/user-attachments/assets/0b4e6b0b-5628-4a9e-91ec-8c8cf4b3b9b8)](#)
 
 ## Download/Installation
 
@@ -11,7 +10,7 @@ You can download a version in the [releases page](https://github.com/Synthird/Te
 
 ### Opening the exe in the zip folder (Windows only)
 
-1. Download and unzip the zip folder
+1. Download and unzip the zip folder called "Textfield-resizes-window.zip"
 3. Open the exe file
 4. If you get a pop-up saying the exe might be a virus
     - Click "More info"
