@@ -2,7 +2,8 @@
 
 Resizing a GUI window by entering a number into the textfields/textboxes.
 
-![Updated textfield resizes window screenshot](https://github.com/user-attachments/assets/0b4e6b0b-5628-4a9e-91ec-8c8cf4b3b9b8)
+![Textfield resizes window screenshot](https://github.com/user-attachments/assets/511194b5-de18-435f-8e4d-6c54a82707f2)
+
 
 ## Download/Installation
 
