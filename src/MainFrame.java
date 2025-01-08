@@ -2,6 +2,8 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
 
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -11,8 +13,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class MainFrame extends JFrame implements ActionListener {
-	final int minWidth = 394;
+public class MainFrame extends JFrame implements ActionListener, ComponentListener {
+	final int minWidth = 320;
 	final int minHeight = 180;
 
 	FlowLayout flowLayout = new FlowLayout();
@@ -36,14 +38,14 @@ public class MainFrame extends JFrame implements ActionListener {
 		JPanel widthPanel = setUpPanel(0);
 		widthTextField = setUpTextField(widthPanel);
 
-		JLabel widthLabel = new JLabel(showMinAndMaxLength("Width", minWidth));
+		JLabel widthLabel = new JLabel(String.format("px (Width) | minimum is %s", minWidth));
 		widthPanel.add(widthLabel);
 
 		// Height panel
 		JPanel heightPanel = setUpPanel(1);
 		heightTextField = setUpTextField(heightPanel);
 
-		JLabel heightLabel = new JLabel(showMinAndMaxLength("Height", minHeight));
+		JLabel heightLabel = new JLabel(String.format("px (Height) | minimum is %s", minHeight));
 		heightPanel.add(heightLabel);
 
 		// Checkbox
@@ -68,6 +70,7 @@ public class MainFrame extends JFrame implements ActionListener {
 		this.setResizable(false);
 		this.setLayout(null);
 		this.setLocationRelativeTo(null);
+		this.addComponentListener(this);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setVisible(true);
 	}
@@ -119,7 +122,23 @@ public class MainFrame extends JFrame implements ActionListener {
 		return panel;
 	}
 
-	private String showMinAndMaxLength(String length, int minimum) {
-		return String.format("px (%s) | minimum is %s, maximum is %s", length, minimum, Integer.MAX_VALUE);
+	@Override
+	public void componentResized(ComponentEvent e) {
+		Dimension windowSize = this.getSize();
+
+		widthTextField.setText(String.valueOf(windowSize.width));
+		heightTextField.setText(String.valueOf(windowSize.height));
+	}
+
+	@Override
+	public void componentMoved(ComponentEvent e) {
+	}
+
+	@Override
+	public void componentShown(ComponentEvent e) {
+	}
+
+	@Override
+	public void componentHidden(ComponentEvent e) {
 	}
 }
