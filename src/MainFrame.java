@@ -84,7 +84,7 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 			} catch (NumberFormatException exception) {
 				JOptionPane.showMessageDialog(null, String.format(
 						"Empty textfields/textboxes, letters, decimals, symbols, or numbers larger than %s are not allowed!",
-						Integer.MAX_VALUE), "CANNOT RESIZE", JOptionPane.ERROR_MESSAGE);
+						Integer.MAX_VALUE), "CANNOT RESIZE!", JOptionPane.ERROR_MESSAGE);
 			} finally {
 				this.setSize(widthSize, heightSize);
 			}
