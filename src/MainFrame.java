@@ -19,17 +19,14 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 
 	FlowLayout flowLayout = new FlowLayout();
 
-	JTextField widthTextField;
-	JTextField heightTextField;
+	JTextField widthTextField, heightTextField;
 
 	JCheckBox resizable;
 
 	JPanel buttonPanel;
-	JButton resizeButton;
-	JButton exitButton;
+	JButton resizeButton, exitButton;
 
-	int widthSize;
-	int heightSize;
+	int widthSize, heightSize;
 
 	public MainFrame() {
 		flowLayout.setAlignment(FlowLayout.LEFT);
