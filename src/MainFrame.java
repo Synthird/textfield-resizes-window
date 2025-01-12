@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class MainFrame extends JFrame implements ActionListener, ComponentListener {
-	final int minWidth = 320;
+	final int minWidth = 325;
 	final int minHeight = 180;
 
 	FlowLayout flowLayout = new FlowLayout();
@@ -35,14 +35,14 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 		JPanel widthPanel = setUpPanel(0);
 		widthTextField = setUpTextField(widthPanel);
 
-		JLabel widthLabel = new JLabel(String.format("px (Width) | minimum is %s", minWidth));
+		JLabel widthLabel = new JLabel("px (Width)");
 		widthPanel.add(widthLabel);
 
 		// Height panel
 		JPanel heightPanel = setUpPanel(1);
 		heightTextField = setUpTextField(heightPanel);
 
-		JLabel heightLabel = new JLabel(String.format("px (Height) | minimum is %s", minHeight));
+		JLabel heightLabel = new JLabel("px (Height)");
 		heightPanel.add(heightLabel);
 
 		// Checkbox
