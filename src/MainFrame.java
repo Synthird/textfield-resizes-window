@@ -14,9 +14,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class MainFrame extends JFrame implements ActionListener, ComponentListener {
-	final int minWidth = 325;
-	final int minHeight = 180;
-
 	FlowLayout flowLayout = new FlowLayout();
 
 	JTextField widthTextField, heightTextField;
@@ -62,7 +59,7 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 
 		// Window setup
 		this.setTitle("Textfield resizes window");
-		this.setSize(minWidth, minHeight);
+		this.setSize(325, 180);
 		this.setMinimumSize(this.getSize());
 		this.setResizable(false);
 		this.setLayout(null);
