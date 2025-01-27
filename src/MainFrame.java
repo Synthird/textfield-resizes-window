@@ -1,4 +1,3 @@
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
@@ -58,7 +57,6 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 
 		resizeButton = setUpButton("Resize");
 		exitButton = setUpButton("Exit");
-		exitButton.setBackground(new Color(255, 91, 91));
 
 		// Window setup
 		this.setTitle("Textfield resizes window");
