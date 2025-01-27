@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
@@ -46,6 +47,7 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 		JPanel checkPanel = setUpPanel(2);
 
 		resizable = new JCheckBox("Resize with mouse and maximize/restore button");
+		resizable.setSelected(true);
 		resizable.setFocusable(false);
 		resizable.setOpaque(false);
 		resizable.addActionListener(this);
@@ -56,12 +58,11 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 
 		resizeButton = setUpButton("Resize");
 		exitButton = setUpButton("Exit");
+		exitButton.setBackground(new Color(255, 91, 91));
 
 		// Window setup
 		this.setTitle("Textfield resizes window");
 		this.setSize(325, 180);
-		this.setMinimumSize(this.getSize());
-		this.setResizable(false);
 		this.setLayout(null);
 		this.setLocationRelativeTo(null);
 		this.addComponentListener(this);
