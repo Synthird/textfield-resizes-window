@@ -117,10 +117,8 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 
 	@Override
 	public void componentResized(ComponentEvent e) {
-		Dimension windowSize = this.getSize();
-
-		widthTextField.setText(String.valueOf(windowSize.width));
-		heightTextField.setText(String.valueOf(windowSize.height));
+		widthTextField.setText(String.valueOf(this.getWidth()));
+		heightTextField.setText(String.valueOf(this.getHeight()));
 	}
 
 	@Override
