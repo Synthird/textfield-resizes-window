@@ -23,7 +23,7 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 	JPanel buttonPanel;
 	JButton resizeButton, exitButton;
 
-	int widthSize, heightSize;
+	int widthSize = 325, heightSize = 180;
 
 	public MainFrame() {
 		flowLayout.setAlignment(FlowLayout.LEFT);
@@ -60,7 +60,7 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 
 		// Window setup
 		this.setTitle("Textfield resizes window");
-		this.setSize(325, 180);
+		this.setSize(widthSize, heightSize);
 		this.setLayout(null);
 		this.setLocationRelativeTo(null);
 		this.addComponentListener(this);
