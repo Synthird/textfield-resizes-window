@@ -71,13 +71,26 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == resizeButton || e.getSource() == widthTextField || e.getSource() == heightTextField) {
+			String widthText = widthTextField.getText();
+			String heightText = heightTextField.getText();
+
 			try {
-				widthSize = Integer.parseInt(widthTextField.getText().replaceAll("\\s", ""));
-				heightSize = Integer.parseInt(heightTextField.getText().replaceAll("\\s", ""));
+				if (!widthText.isBlank()) {
+					widthSize = Integer.parseInt(widthText.replaceAll("\\s", ""));
+				} else {
+					widthSize = 0;
+				}
+
+				if (!heightText.isBlank()) {
+					heightSize = Integer.parseInt(heightText.replaceAll("\\s", ""));
+				} else {
+					heightSize = 0;
+				}
+
 				this.setSize(widthSize, heightSize);
 			} catch (NumberFormatException exception) {
 				JOptionPane.showMessageDialog(this, String.format(
-						"Empty textfields/textboxes, letters, decimals, symbols, or numbers larger than %s are not allowed!",
+						"Letters, decimals, symbols, or numbers larger than %s are not allowed!",
 						Integer.MAX_VALUE), "CANNOT RESIZE!", JOptionPane.ERROR_MESSAGE);
 			}
 		} else if (e.getSource() == resizable) {
