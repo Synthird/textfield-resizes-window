@@ -14,8 +14,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class MainFrame extends JFrame implements ActionListener, ComponentListener {
-	FlowLayout flowLayout = new FlowLayout(FlowLayout.LEFT);
-
 	JTextField widthTextField, heightTextField;
 
 	JCheckBox resizable;
@@ -120,7 +118,7 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 		JPanel panel = new JPanel();
 		panel.setOpaque(false);
 		panel.setBounds(0, 35 * level, 385, 35);
-		panel.setLayout(flowLayout);
+		panel.setLayout(new FlowLayout(FlowLayout.LEFT));
 		this.add(panel);
 		return panel;
 	}
