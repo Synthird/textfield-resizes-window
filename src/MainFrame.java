@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class MainFrame extends JFrame implements ActionListener, ComponentListener {
-	FlowLayout flowLayout = new FlowLayout();
+	FlowLayout flowLayout = new FlowLayout(FlowLayout.LEFT);
 
 	JTextField widthTextField, heightTextField;
 
@@ -26,8 +26,6 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 	int widthSize = 325, heightSize = 180;
 
 	public MainFrame() {
-		flowLayout.setAlignment(FlowLayout.LEFT);
-
 		// Width panel
 		JPanel widthPanel = setUpPanel(0);
 		widthTextField = setUpTextField(widthPanel);
