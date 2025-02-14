@@ -71,7 +71,7 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 
 			try {
 				if (!widthText.isBlank()) {
-					widthSize = Integer.parseInt(widthText.replaceAll("\\s", ""));
+					widthSize = Integer.parseInt(widthText.replaceAll(" ", ""));
 				} else {
 					widthSize = 0;
 				}
