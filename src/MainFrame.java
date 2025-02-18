@@ -77,7 +77,7 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 				}
 
 				if (!heightText.isBlank()) {
-					heightSize = Integer.parseInt(heightText.replaceAll("\\s", ""));
+					heightSize = Integer.parseInt(heightText.replaceAll(" ", ""));
 				} else {
 					heightSize = 0;
 				}
