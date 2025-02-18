@@ -71,13 +71,13 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 
 			try {
 				if (!widthText.isBlank()) {
-					widthSize = Integer.parseInt(widthText.replaceAll(" ", ""));
+					widthSize = stringToInt(widthText);
 				} else {
 					widthSize = 0;
 				}
 
 				if (!heightText.isBlank()) {
-					heightSize = Integer.parseInt(heightText.replaceAll(" ", ""));
+					heightSize = stringToInt(heightText);
 				} else {
 					heightSize = 0;
 				}
@@ -93,6 +93,10 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 		} else if (e.getSource() == exitButton) {
 			System.exit(0);
 		}
+	}
+
+	private int stringToInt(String stringValue) {
+		return Integer.parseInt(stringValue.replaceAll(" ", ""));
 	}
 
 	// Setting up GUIs that have the same properties
