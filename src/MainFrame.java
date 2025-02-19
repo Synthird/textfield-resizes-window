@@ -27,16 +27,12 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 		// Width panel
 		JPanel widthPanel = setUpPanel(0);
 		widthTextField = setUpTextField(widthPanel);
-
-		JLabel widthLabel = new JLabel("px (Width)");
-		widthPanel.add(widthLabel);
+		widthPanel.add(new JLabel("px (Width)"));
 
 		// Height panel
 		JPanel heightPanel = setUpPanel(1);
 		heightTextField = setUpTextField(heightPanel);
-
-		JLabel heightLabel = new JLabel("px (Height)");
-		heightPanel.add(heightLabel);
+		heightPanel.add(new JLabel("px (Height)"));
 
 		// Checkbox
 		JPanel checkPanel = setUpPanel(2);
