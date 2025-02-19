@@ -51,7 +51,7 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 
 		// Window setup
 		this.setTitle("Textfield resizes window");
-		this.setSize(widthSize, heightSize);
+		changeWindowSize();
 		this.setLayout(null);
 		this.setLocationRelativeTo(null);
 		this.addComponentListener(this);
@@ -78,7 +78,7 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 					heightSize = 0;
 				}
 
-				this.setSize(widthSize, heightSize);
+				changeWindowSize();
 			} catch (NumberFormatException exception) {
 				JOptionPane.showMessageDialog(this, String.format(
 						"Letters, decimals, symbols, or numbers larger than %s are not allowed!",
@@ -89,6 +89,10 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 		} else if (e.getSource() == exitButton) {
 			System.exit(0);
 		}
+	}
+
+	private void changeWindowSize() {
+		this.setSize(widthSize, heightSize);
 	}
 
 	private int stringToInt(String stringValue) {
