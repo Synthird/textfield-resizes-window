@@ -80,9 +80,8 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 
 				changeWindowSize();
 			} catch (NumberFormatException exception) {
-				JOptionPane.showMessageDialog(this, String.format(
-						"Letters, decimals, symbols, or numbers larger than %s are not allowed!",
-						Integer.MAX_VALUE), "CANNOT RESIZE!", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(this, "Letters, decimals, symbols, or numbers are not allowed!",
+						"CANNOT RESIZE!", JOptionPane.ERROR_MESSAGE);
 			}
 		} else if (e.getSource() == resizable) {
 			this.setResizable(!this.isResizable());
@@ -96,7 +95,8 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 	}
 
 	private int stringToInt(String stringValue) {
-		return Integer.parseInt(stringValue.replaceAll(" ", ""));
+		String removedSpaces = stringValue.replaceAll(" ", "");
+		return removedSpaces.length() >= 10 ? Integer.MAX_VALUE : Integer.parseInt(removedSpaces);
 	}
 
 	// Setting up GUIs that have the same properties
