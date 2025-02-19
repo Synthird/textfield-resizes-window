@@ -80,7 +80,7 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 
 				changeWindowSize();
 			} catch (NumberFormatException exception) {
-				JOptionPane.showMessageDialog(this, "Textfields/textboxes do not allow letters, decimals, and symbols!",
+				JOptionPane.showMessageDialog(this, "Textfields/textboxes do not allow letters, decimals, or symbols!",
 						"CANNOT RESIZE!", JOptionPane.ERROR_MESSAGE);
 			}
 		} else if (e.getSource() == resizable) {
