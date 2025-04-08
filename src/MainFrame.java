@@ -9,12 +9,14 @@ import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.JSpinner;
+import javax.swing.SpinnerNumberModel;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
-public class MainFrame extends JFrame implements ActionListener, ComponentListener {
-	JTextField widthTextField, heightTextField;
+public class MainFrame extends JFrame implements ActionListener, ComponentListener, ChangeListener {
+	JSpinner widthTextField, heightTextField;
 
 	JCheckBox resizable;
 
@@ -26,19 +28,18 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 	public MainFrame() {
 		// Width panel
 		JPanel widthPanel = setUpPanel(0);
-		widthTextField = setUpTextField(widthPanel);
+		widthTextField = setUpSpinner(widthPanel, widthSize);
 		widthPanel.add(new JLabel("px (Width)"));
 
 		// Height panel
 		JPanel heightPanel = setUpPanel(1);
-		heightTextField = setUpTextField(heightPanel);
+		heightTextField = setUpSpinner(heightPanel, heightSize);
 		heightPanel.add(new JLabel("px (Height)"));
 
 		// Checkbox
 		JPanel checkPanel = setUpPanel(2);
 
 		resizable = new JCheckBox("Resize with mouse and maximize/restore button", true);
-		resizable.setFocusable(false);
 		resizable.setOpaque(false);
 		resizable.addActionListener(this);
 		checkPanel.add(resizable);
@@ -61,28 +62,8 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == resizeButton || e.getSource() == widthTextField || e.getSource() == heightTextField) {
-			String widthText = widthTextField.getText();
-			String heightText = heightTextField.getText();
-
-			try {
-				if (!widthText.isBlank()) {
-					widthSize = stringToInt(widthText);
-				} else {
-					widthSize = 0;
-				}
-
-				if (!heightText.isBlank()) {
-					heightSize = stringToInt(heightText);
-				} else {
-					heightSize = 0;
-				}
-
-				changeWindowSize();
-			} catch (NumberFormatException exception) {
-				JOptionPane.showMessageDialog(this, "Textfields/textboxes do not allow letters, decimals, or symbols!",
-						"CANNOT RESIZE!", JOptionPane.ERROR_MESSAGE);
-			}
+		if (e.getSource() == resizeButton) {
+			changeWindowSize();
 		} else if (e.getSource() == resizable) {
 			this.setResizable(!this.isResizable());
 		} else if (e.getSource() == exitButton) {
@@ -94,24 +75,20 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 		this.setSize(widthSize, heightSize);
 	}
 
-	private int stringToInt(String stringValue) {
-		String removedSpaces = stringValue.replaceAll(" ", "");
-		return removedSpaces.length() >= 10 ? Integer.MAX_VALUE : Integer.parseInt(removedSpaces);
-	}
-
 	// Setting up GUIs that have the same properties
 
-	private JTextField setUpTextField(JPanel panel) {
-		JTextField textField = new JTextField();
-		textField.setPreferredSize(new Dimension(50, 26));
-		textField.addActionListener(this);
-		panel.add(textField);
-		return textField;
+	private JSpinner setUpSpinner(JPanel panel, int initialValue) {
+		SpinnerNumberModel spinnerNumberModel = new SpinnerNumberModel(initialValue, 0, Integer.MAX_VALUE, 1);
+		JSpinner spinner = new JSpinner(spinnerNumberModel);
+
+		spinner.setPreferredSize(new Dimension(50, 26));
+		spinner.addChangeListener(this);
+		panel.add(spinner);
+		return spinner;
 	}
 
 	private JButton setUpButton(String text) {
 		JButton button = new JButton(text);
-		button.setFocusable(false);
 		button.addActionListener(this);
 		buttonPanel.add(button);
 		return button;
@@ -128,8 +105,8 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 
 	@Override
 	public void componentResized(ComponentEvent e) {
-		widthTextField.setText(String.valueOf(this.getWidth()));
-		heightTextField.setText(String.valueOf(this.getHeight()));
+		widthTextField.setValue(this.getWidth());
+		heightTextField.setValue(this.getHeight());
 	}
 
 	@Override
@@ -142,5 +119,14 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 
 	@Override
 	public void componentHidden(ComponentEvent e) {
+	}
+
+	@Override
+	public void stateChanged(ChangeEvent e) {
+		if (e.getSource() == widthTextField) {
+			widthSize = (int) widthTextField.getValue();
+		} else if (e.getSource() == heightTextField) {
+			heightSize = (int) heightTextField.getValue();
+		}
 	}
 }
