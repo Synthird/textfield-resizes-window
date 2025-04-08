@@ -4,6 +4,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -15,7 +17,7 @@ import javax.swing.SpinnerNumberModel;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-public class MainFrame extends JFrame implements ActionListener, ComponentListener, ChangeListener {
+public class MainFrame extends JFrame implements ActionListener, ComponentListener, ChangeListener, KeyListener {
 	JSpinner widthTextField, heightTextField;
 
 	JCheckBox resizable;
@@ -78,11 +80,10 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 	// Setting up GUIs that have the same properties
 
 	private JSpinner setUpSpinner(JPanel panel, int initialValue) {
-		SpinnerNumberModel spinnerNumberModel = new SpinnerNumberModel(initialValue, 0, Integer.MAX_VALUE, 1);
-		JSpinner spinner = new JSpinner(spinnerNumberModel);
-
+		JSpinner spinner = new JSpinner(new SpinnerNumberModel(initialValue, 0, Integer.MAX_VALUE, 1));
 		spinner.setPreferredSize(new Dimension(50, 26));
 		spinner.addChangeListener(this);
+		spinner.getEditor().getComponent(0).addKeyListener(this);
 		panel.add(spinner);
 		return spinner;
 	}
@@ -127,6 +128,21 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 			widthSize = (int) widthTextField.getValue();
 		} else if (e.getSource() == heightTextField) {
 			heightSize = (int) heightTextField.getValue();
+		}
+	}
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		if (e.getKeyCode() == 10) {
+			changeWindowSize();
 		}
 	}
 }
