@@ -40,7 +40,6 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 
 		// Checkbox
 		JPanel checkPanel = setUpPanel(2);
-
 		resizable = new JCheckBox("Resize with mouse and maximize/restore button", true);
 		resizable.setOpaque(false);
 		resizable.addActionListener(this);
@@ -48,7 +47,6 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 
 		// Buttons
 		buttonPanel = setUpPanel(3);
-
 		resizeButton = setUpButton("Resize");
 		exitButton = setUpButton("Exit");
 
