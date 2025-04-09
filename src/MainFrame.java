@@ -102,6 +102,8 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 		return panel;
 	}
 
+	// Interface methods
+
 	@Override
 	public void componentResized(ComponentEvent e) {
 		widthTextField.setValue(this.getWidth());
