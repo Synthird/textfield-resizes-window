@@ -11,7 +11,7 @@ You can download a version in the [releases page](https://github.com/Synthird/Te
 ### Opening the exe in the zip folder (Windows only)
 
 1. Download and unzip the zip folder called "Textfield-resizes-window.zip"
-2. Open the exe file
+2. Open the exe file in the unzipped folder
 3. If you get a pop-up saying the exe might be a virus
     - Click "More info"
     - Click "Run anyway"
