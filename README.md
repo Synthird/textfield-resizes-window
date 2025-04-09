@@ -1,6 +1,6 @@
 # Textfield resizes window
 
-Resizing a GUI window by entering a number into textfields/textboxes.
+Resize a GUI window by entering a number into textfields/textboxes.
 
 ![Textfield resizes window GUI](https://github.com/user-attachments/assets/a0e33f61-3137-46b3-86fc-70c5644e8daf)
 
