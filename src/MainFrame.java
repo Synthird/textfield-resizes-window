@@ -7,6 +7,7 @@ import java.awt.event.ComponentListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
@@ -51,7 +52,10 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 		exitButton = setUpButton("Exit");
 
 		// Window setup
+		ImageIcon imageIcon = new ImageIcon("TextfieldResizesWindowIcon.png");
+
 		this.setTitle("Textfield resizes window");
+		this.setIconImage(imageIcon.getImage());
 		changeWindowSize();
 		this.setLayout(null);
 		this.setLocationRelativeTo(null);
