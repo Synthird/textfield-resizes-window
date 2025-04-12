@@ -2,11 +2,11 @@
 
 Resize a GUI window by entering a number into textfields/textboxes.
 
-![Textfield resizes window GUI](https://github.com/user-attachments/assets/a0e33f61-3137-46b3-86fc-70c5644e8daf)
+![Textfield resizes window GUI](https://github.com/user-attachments/assets/b2653afe-bbc4-42ae-9497-5729e19d8527)
 
 ## Download/Installation
 
-You can download a version in the [releases page](https://github.com/Synthird/Textfield-resizes-window/releases).
+You can download the latest version in the [releases page](https://github.com/Synthird/Textfield-resizes-window/releases/latest).
 
 ### Opening the exe in the zip folder (Windows only)
 
@@ -20,19 +20,20 @@ This is not a virus, so it is safe to install.
 
 ### Opening the jar file (Any operating system)
 
-You need an openJDK installed on your device to open the jar file. Here are a couple ones to choose:
+1. You need an openJDK installed on your device to open the jar file. Here are a couple ones to choose:
+    
+    - [Amazon Correto](https://aws.amazon.com/corretto/)
+    - [Azul Zulu](https://www.azul.com/downloads/?package=jdk#zulu)
+    - [Eclipse Adoptium](https://adoptium.net/)
+    - [IBM Semeru Runtimes](https://developer.ibm.com/languages/java/semeru-runtimes/)
+    - [Microsoft's openJDK](https://www.microsoft.com/openjdk)
+    - [Oracle GraalVM](https://www.graalvm.org/downloads/)
+    - [Oracle Java SE](https://www.oracle.com/java/technologies/downloads/)
+    - [Red Hat's openJDK](https://developers.redhat.com/products/openjdk/download)
+    - [SapMachine](https://sap.github.io/SapMachine/)
 
-- [Amazon Correto](https://aws.amazon.com/corretto/)
-- [Azul Zulu](https://www.azul.com/downloads/?package=jdk#zulu)
-- [Eclipse Adoptium](https://adoptium.net/)
-- [IBM Semeru Runtimes](https://developer.ibm.com/languages/java/semeru-runtimes/)
-- [Microsoft's openJDK](https://www.microsoft.com/openjdk)
-- [Oracle GraalVM](https://www.graalvm.org/downloads/)
-- [Oracle Java SE](https://www.oracle.com/java/technologies/downloads/)
-- [Red Hat's openJDK](https://developers.redhat.com/products/openjdk/download)
-- [SapMachine](https://sap.github.io/SapMachine/)
-
-Once you installed an openJDK, download the jar file and open it.
+2. Once you installed an openJDK, download and unzip the zip folder called "Textfield-resizes-window-jar.zip"
+3. Open the jar file in the unzipped folder
 
 ## License
 
