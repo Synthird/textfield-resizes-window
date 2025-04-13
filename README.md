@@ -10,7 +10,7 @@ You can download the latest version in the [releases page](https://github.com/Sy
 
 ### Opening the exe in the zip folder (Windows only)
 
-1. Download and unzip the zip folder called "Textfield-resizes-window.zip"
+1. Download and unzip the zip folder called ```Textfield-resizes-window.zip```
 2. Open the exe file in the unzipped folder
 3. If you get a pop-up saying the exe might be a virus
     - Click "More info"
@@ -32,7 +32,7 @@ This is not a virus, so it is safe to install.
     - [Red Hat's openJDK](https://developers.redhat.com/products/openjdk/download)
     - [SapMachine](https://sap.github.io/SapMachine/)
 
-2. Once you installed an openJDK, download and unzip the zip folder called "Textfield-resizes-window-jar.zip"
+2. Once you installed an openJDK, download and unzip the zip folder called ```Textfield-resizes-window-jar.zip```
 3. Open the jar file in the unzipped folder
 
 ## License
