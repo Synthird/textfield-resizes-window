@@ -40,11 +40,10 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 		heightPanel.add(new JLabel("px (Height)"));
 
 		// Checkbox
-		JPanel checkPanel = setUpPanel(2);
 		resizable = new JCheckBox("Resize with mouse and maximize/restore button", true);
 		resizable.setOpaque(false);
 		resizable.addActionListener(this);
-		checkPanel.add(resizable);
+		setUpPanel(2).add(resizable);
 
 		// Buttons
 		buttonPanel = setUpPanel(3);
