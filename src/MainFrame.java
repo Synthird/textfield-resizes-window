@@ -19,6 +19,8 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
 public class MainFrame extends JFrame implements ActionListener, ComponentListener, ChangeListener, KeyListener {
+	FlowLayout flowLayout = new FlowLayout(FlowLayout.LEFT);
+
 	JSpinner widthField, heightField;
 
 	JCheckBox resizable;
@@ -100,7 +102,7 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 		JPanel panel = new JPanel();
 		panel.setOpaque(false);
 		panel.setBounds(0, 35 * level, 385, 35);
-		panel.setLayout(new FlowLayout(FlowLayout.LEFT));
+		panel.setLayout(flowLayout);
 		this.add(panel);
 		return panel;
 	}
