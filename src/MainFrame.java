@@ -19,7 +19,7 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
 public class MainFrame extends JFrame implements ActionListener, ComponentListener, ChangeListener, KeyListener {
-	JSpinner widthTextField, heightTextField;
+	JSpinner widthField, heightField;
 
 	JCheckBox resizable;
 
@@ -31,12 +31,12 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 	public MainFrame() {
 		// Width panel
 		JPanel widthPanel = setUpPanel(0);
-		widthTextField = setUpSpinner(widthPanel, widthSize);
+		widthField = setUpSpinner(widthPanel, widthSize);
 		widthPanel.add(new JLabel("px (Width)"));
 
 		// Height panel
 		JPanel heightPanel = setUpPanel(1);
-		heightTextField = setUpSpinner(heightPanel, heightSize);
+		heightField = setUpSpinner(heightPanel, heightSize);
 		heightPanel.add(new JLabel("px (Height)"));
 
 		// Checkbox
@@ -110,8 +110,8 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 
 	@Override
 	public void componentResized(ComponentEvent e) {
-		widthTextField.setValue(this.getWidth());
-		heightTextField.setValue(this.getHeight());
+		widthField.setValue(this.getWidth());
+		heightField.setValue(this.getHeight());
 	}
 
 	@Override
@@ -128,10 +128,10 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 
 	@Override
 	public void stateChanged(ChangeEvent e) {
-		if (e.getSource() == widthTextField) {
-			widthSize = (int) widthTextField.getValue();
-		} else if (e.getSource() == heightTextField) {
-			heightSize = (int) heightTextField.getValue();
+		if (e.getSource() == widthField) {
+			widthSize = (int) widthField.getValue();
+		} else if (e.getSource() == heightField) {
+			heightSize = (int) heightField.getValue();
 		}
 	}
 
