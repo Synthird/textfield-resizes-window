@@ -53,10 +53,8 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 		exitButton = setUpButton("Exit");
 
 		// Window setup
-		ImageIcon icon = new ImageIcon("TextfieldResizesWindowIcon.png");
-
 		this.setTitle("Textfield resizes window");
-		this.setIconImage(icon.getImage());
+		this.setIconImage((new ImageIcon("TextfieldResizesWindowIcon.png")).getImage());
 		changeWindowSize();
 		this.setLayout(null);
 		this.setLocationRelativeTo(null);
