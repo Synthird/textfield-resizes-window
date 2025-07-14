@@ -65,11 +65,13 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == resizeButton) {
+		Object source = e.getSource();
+
+		if (source == resizeButton) {
 			changeWindowSize();
-		} else if (e.getSource() == resizable) {
+		} else if (source == resizable) {
 			this.setResizable(!this.isResizable());
-		} else if (e.getSource() == exitButton) {
+		} else if (source == exitButton) {
 			System.exit(0);
 		}
 	}
@@ -127,9 +129,11 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 
 	@Override
 	public void stateChanged(ChangeEvent e) {
-		if (e.getSource() == widthField) {
+		Object source = e.getSource();
+
+		if (source == widthField) {
 			widthSize = (int) widthField.getValue();
-		} else if (e.getSource() == heightField) {
+		} else if (source == heightField) {
 			heightSize = (int) heightField.getValue();
 		}
 	}
