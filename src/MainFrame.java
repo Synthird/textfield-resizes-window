@@ -75,7 +75,7 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 
 	private JSpinner setUpSpinner(JPanel panel, int initialValue) {
 		JSpinner spinner = new JSpinner(new SpinnerNumberModel(initialValue, 0, Integer.MAX_VALUE, 1));
-		spinner.setPreferredSize(new Dimension(70, 26));
+		spinner.setPreferredSize(new Dimension(63, 26));
 		spinner.addChangeListener(this);
 		spinner.getEditor().getComponent(0).addKeyListener(this);
 		panel.add(spinner);
