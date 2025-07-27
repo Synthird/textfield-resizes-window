@@ -46,7 +46,7 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 		setUpPanel(2).add(resizable);
 
 		// Buttons
-		buttonPanel = setUpPanel(4);
+		buttonPanel = setUpPanel(3);
 		resizeButton = setUpButton("Resize");
 		exitButton = setUpButton("Exit");
 
