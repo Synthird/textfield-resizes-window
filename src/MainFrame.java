@@ -18,8 +18,6 @@ import javax.swing.SpinnerNumberModel;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-import com.formdev.flatlaf.FlatLightLaf;
-
 public class MainFrame extends JFrame implements ActionListener, ComponentListener, ChangeListener, KeyListener {
 	FlowLayout flowLayout = new FlowLayout(FlowLayout.LEFT);
 
@@ -33,8 +31,6 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 	int widthSize = 325, heightSize = 180;
 
 	public MainFrame() {
-		FlatLightLaf.setup();
-
 		// Width panel
 		JPanel widthPanel = setUpPanel(0);
 		widthField = setUpSpinner(widthPanel, widthSize);
@@ -45,14 +41,12 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 		heightField = setUpSpinner(heightPanel, heightSize);
 		heightPanel.add(new JLabel("px (Height)"));
 
-		// Checkbox
-		resizable = new JCheckBox("Resize with mouse and maximize/restore button", true);
-		resizable.setOpaque(false);
-		resizable.addActionListener(this);
+		// Resizable checkbox
+		resizable = setUpCheckBox("Resize with mouse and maximize/restore button", true);
 		setUpPanel(2).add(resizable);
 
 		// Buttons
-		buttonPanel = setUpPanel(3);
+		buttonPanel = setUpPanel(4);
 		resizeButton = setUpButton("Resize");
 		exitButton = setUpButton("Exit");
 
@@ -80,6 +74,13 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 		spinner.getEditor().getComponent(0).addKeyListener(this);
 		panel.add(spinner);
 		return spinner;
+	}
+
+	private JCheckBox setUpCheckBox(String text, boolean selected) {
+		JCheckBox checkbox = new JCheckBox(text, selected);
+		checkbox.setOpaque(false);
+		checkbox.addActionListener(this);
+		return checkbox;
 	}
 
 	private JButton setUpButton(String text) {
