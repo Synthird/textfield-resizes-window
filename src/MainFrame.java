@@ -18,8 +18,6 @@ import javax.swing.SpinnerNumberModel;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-import com.formdev.flatlaf.FlatLightLaf;
-
 public class MainFrame extends JFrame implements ActionListener, ComponentListener, ChangeListener, KeyListener {
 	FlowLayout flowLayout = new FlowLayout(FlowLayout.LEFT);
 
@@ -33,8 +31,6 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 	int widthSize = 325, heightSize = 180;
 
 	public MainFrame() {
-		FlatLightLaf.setup();
-
 		// Width panel
 		JPanel widthPanel = setUpPanel(0);
 		widthField = setUpSpinner(widthPanel, widthSize);
