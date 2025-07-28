@@ -2,7 +2,7 @@
 
 Resize a GUI window using textfields/textboxes.
 
-![Textfield resizes window GUI](https://github.com/user-attachments/assets/e269345b-c4c7-4ddf-be35-eb20c0362c68)
+![Textfield resizes window GUI](https://github.com/user-attachments/assets/6f5fbc30-bb0d-4f9e-a73f-b22d1da3554e)
 
 ## Third-party libraries used
 
