@@ -6,7 +6,7 @@ Resize a GUI window using textfields/textboxes.
 
 ## Third-party libraries used
 
-- [FlatLaf](https://www.formdev.com/flatlaf/) for the dark theme
+- [FlatLaf](https://www.formdev.com/flatlaf/) for the light and dark themes
 
 ## Download/Installation
 
