@@ -18,17 +18,21 @@ import javax.swing.SpinnerNumberModel;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
+import com.formdev.flatlaf.FlatDarkLaf;
+import com.formdev.flatlaf.FlatLaf;
+import com.formdev.flatlaf.FlatLightLaf;
+
 public class MainFrame extends JFrame implements ActionListener, ComponentListener, ChangeListener, KeyListener {
 	FlowLayout flowLayout = new FlowLayout(FlowLayout.LEFT);
 
 	JSpinner widthField, heightField;
 
-	JCheckBox resizable;
+	JCheckBox resizable, darkMode;
 
 	JPanel buttonPanel;
 	JButton resizeButton, exitButton;
 
-	int widthSize = 325, heightSize = 180;
+	int widthSize = 325, heightSize = 212;
 
 	public MainFrame() {
 		// Width panel
@@ -45,8 +49,12 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 		resizable = setUpCheckBox("Resize with mouse and maximize/restore button", true);
 		setUpPanel(2).add(resizable);
 
+		// Toggle between light and dark mode
+		darkMode = setUpCheckBox("Dark mode", true);
+		setUpPanel(3).add(darkMode);
+
 		// Buttons
-		buttonPanel = setUpPanel(3);
+		buttonPanel = setUpPanel(4);
 		resizeButton = setUpButton("Resize");
 		exitButton = setUpButton("Exit");
 
@@ -109,6 +117,14 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 			changeWindowSize();
 		} else if (source == resizable) {
 			this.setResizable(!this.isResizable());
+		} else if (source == darkMode) {
+			if (!FlatLaf.isLafDark()) {
+				FlatDarkLaf.setup();
+				FlatLaf.updateUI();
+			} else {
+				FlatLightLaf.setup();
+				FlatLaf.updateUI();
+			}
 		} else if (source == exitButton) {
 			System.exit(0);
 		}
