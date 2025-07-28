@@ -46,11 +46,11 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 		heightPanel.add(new JLabel("px (Height)"));
 
 		// Resizable checkbox
-		resizable = setUpCheckBox("Resize with mouse and maximize/restore button", true);
+		resizable = setUpCheckBox("Resize with mouse and maximize/restore button");
 		setUpPanel(2).add(resizable);
 
 		// Toggle between light and dark mode
-		darkMode = setUpCheckBox("Dark mode", true);
+		darkMode = setUpCheckBox("Dark mode");
 		setUpPanel(3).add(darkMode);
 
 		// Buttons
@@ -84,8 +84,8 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 		return spinner;
 	}
 
-	private JCheckBox setUpCheckBox(String text, boolean selected) {
-		JCheckBox checkbox = new JCheckBox(text, selected);
+	private JCheckBox setUpCheckBox(String text) {
+		JCheckBox checkbox = new JCheckBox(text, true);
 		checkbox.setOpaque(false);
 		checkbox.addActionListener(this);
 		return checkbox;
