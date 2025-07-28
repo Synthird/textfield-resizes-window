@@ -120,11 +120,11 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 		} else if (source == darkMode) {
 			if (!FlatLaf.isLafDark()) {
 				FlatDarkLaf.setup();
-				FlatLaf.updateUI();
 			} else {
 				FlatLightLaf.setup();
-				FlatLaf.updateUI();
 			}
+
+			FlatLaf.updateUI();
 		} else if (source == exitButton) {
 			System.exit(0);
 		}
