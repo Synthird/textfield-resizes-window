@@ -34,7 +34,7 @@ This is not a virus, so it is safe to install.
     - [Red Hat's openJDK](https://developers.redhat.com/products/openjdk/download)
     - [SapMachine](https://sap.github.io/SapMachine/)
 
-2. Once you installed an openJDK, download and unzip the zip folder called ```textfield-resizes-window.zip```
+2. Once you installed a JDK, download and unzip the zip folder called ```textfield-resizes-window.zip```
 3. Open the jar file in the unzipped folder
 
 ## License
