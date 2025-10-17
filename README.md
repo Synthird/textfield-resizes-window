@@ -22,7 +22,7 @@ This is not a virus, so it is safe to install.
 
 ### Opening the jar file (Any operating system)
 
-1. You need an openJDK installed on your device to open the jar file. Here are a couple ones to choose:
+1. You need a JDK installed on your device to open the jar file. Here are a couple ones to choose:
     
     - [Amazon Correto](https://aws.amazon.com/corretto/)
     - [Azul Zulu](https://www.azul.com/downloads/?package=jdk#zulu)
