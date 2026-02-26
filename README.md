@@ -6,7 +6,7 @@ Resize a GUI window using textfields/textboxes.
 
 ## Third-party libraries used
 
-- [FlatLaf](https://www.formdev.com/flatlaf/) for the light and dark themes
+- [FlatLaf](https://www.formdev.com/flatlaf/) for the light and dark themes.
 
 ## Download/Installation
 
@@ -14,9 +14,9 @@ You can download the latest version in the [releases page](https://github.com/Sy
 
 ### Opening the exe in the zip folder (Windows only)
 
-1. Download and unzip the zip folder called ```textfield-resizes-window-exe.zip```
-2. Open the exe file in the unzipped folder
-3. If you get a pop-up saying the exe might be a virus, just run it anyway
+1. Download and unzip the zip folder called ```textfield-resizes-window-exe.zip```.
+2. Open the exe file in the unzipped folder.
+3. If you get a pop-up saying the exe might be a virus, just run it anyway.
 
 This is not a virus, so it is safe to install.
 
@@ -34,8 +34,8 @@ This is not a virus, so it is safe to install.
     - [Red Hat's openJDK](https://developers.redhat.com/products/openjdk/download)
     - [SapMachine](https://sap.github.io/SapMachine/)
 
-2. Once you installed a JDK, download and unzip the zip folder called ```textfield-resizes-window.zip```
-3. Open the jar file in the unzipped folder
+2. Once you installed a JDK, download and unzip the zip folder called ```textfield-resizes-window.zip```.
+3. Open the jar file in the unzipped folder.
 
 ## License
 
