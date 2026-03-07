@@ -39,7 +39,7 @@ This is not a virus, so it is safe to install.
 
 ## Note for downloading this repository
 
-If you want to download the source code of this repository, you should download [FlatLaf](https://www.formdev.com/flatlaf/).
+If you want to download the source code of this repository, you should download [FlatLaf](https://www.formdev.com/flatlaf/). (**Reccommended:** Use v3.7 or up.)
 
 1. After downloading the source code, create a new folder called ```lib``` in the root directory of it.
 2. Download the [FlatLaf jar file library](https://central.sonatype.com/artifact/com.formdev/flatlaf/overview).
