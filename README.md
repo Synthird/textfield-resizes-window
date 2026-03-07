@@ -37,6 +37,16 @@ This is not a virus, so it is safe to install.
 2. Once you installed a JDK, download and unzip the zip folder called ```textfield-resizes-window.zip```.
 3. Open the jar file in the unzipped folder.
 
+## Note for downloading this repository
+
+If you want to download the source code of this repository, you should download [FlatLaf](https://www.formdev.com/flatlaf/).
+
+1. After downloading the source code, create a new folder called ```lib``` in the root directory of it.
+2. Download the [FlatLaf jar file library](https://central.sonatype.com/artifact/com.formdev/flatlaf/overview).
+3. Place the library into the lib folder.
+
+![The FlatLaf library in the lib folder.](https://github.com/user-attachments/assets/1e19ac9a-620e-46fc-9c58-f077a2368d69)
+
 ## License
 
 This repository contains the MIT license. You must give credit if you are going to use its source code.
