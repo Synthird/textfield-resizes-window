@@ -47,14 +47,14 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 
 		// Resizable checkbox
 		resizable = setUpCheckBox("Resize with mouse and maximize/restore button");
-		setUpPanel(2).add(resizable);
+		setUpPanel(3).add(resizable);
 
 		// Toggle between light and dark mode
 		darkMode = setUpCheckBox("Dark mode");
-		setUpPanel(3).add(darkMode);
+		setUpPanel(4).add(darkMode);
 
 		// Buttons
-		buttonPanel = setUpPanel(4);
+		buttonPanel = setUpPanel(5);
 		resizeButton = setUpButton("Resize");
 		exitButton = setUpButton("Exit");
 
