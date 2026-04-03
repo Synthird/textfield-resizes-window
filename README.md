@@ -2,7 +2,8 @@
 
 Resize a GUI window using textfields/textboxes.
 
-![Textfield resizes window GUI](https://github.com/user-attachments/assets/6f5fbc30-bb0d-4f9e-a73f-b22d1da3554e)
+![Textfield resizes window dark mode](https://github.com/user-attachments/assets/61306e13-2b40-4962-a746-b40b9f36da2c)
+![Textfield resizes window light mode](https://github.com/user-attachments/assets/7e40e20e-0bfc-4b9c-8126-adaada068f51)
 
 ## Third-party libraries used
 
@@ -14,7 +15,7 @@ You can download the latest version in the [releases page](https://github.com/Sy
 
 ### Opening the exe in the zip folder (Windows only)
 
-1. Download and unzip the zip folder called ```textfield-resizes-window-exe.zip```.
+1. Download and unzip the zip folder called ```windows-textfield-resizes-window.zip```.
 2. Open the exe file in the unzipped folder.
 3. If you get a pop-up saying the exe might be a virus, just run it anyway.
 
