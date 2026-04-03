@@ -14,6 +14,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
+import javax.swing.JTextField;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -26,6 +27,7 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 	FlowLayout flowLayout = new FlowLayout(FlowLayout.LEFT);
 
 	JSpinner widthField, heightField;
+	JTextField changeWindowTitle = new JTextField(25);
 
 	JCheckBox resizable, darkMode;
 
@@ -45,18 +47,29 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 		heightField = setUpSpinner(heightPanel, heightSize);
 		heightPanel.add(new JLabel("px (Height)"));
 
+		// Change window title label
 		setUpPanel(2).add(new JLabel("Change window title"));
+
+		// Change window title textfield
+		JPanel changeWindowTitlePanel = setUpPanel(3);
+		changeWindowTitlePanel.setLocation(changeWindowTitlePanel.getX(), changeWindowTitlePanel.getY() - 15);
+		changeWindowTitlePanel.add(changeWindowTitle);
 
 		// Resizable checkbox
 		resizable = setUpCheckBox("Resize with mouse and maximize/restore button");
-		setUpPanel(4).add(resizable);
+		JPanel resizablePanel = setUpPanel(4);
+		resizablePanel.setLocation(resizablePanel.getX(), resizablePanel.getY() - 20);
+		resizablePanel.add(resizable);
 
 		// Toggle between light and dark mode
 		darkMode = setUpCheckBox("Dark mode");
-		setUpPanel(5).add(darkMode);
+		JPanel darkModePanel = setUpPanel(5);
+		darkModePanel.setLocation(darkModePanel.getX(), darkModePanel.getY() - 28);
+		darkModePanel.add(darkMode);
 
 		// Buttons
 		buttonPanel = setUpPanel(6);
+		buttonPanel.setLocation(buttonPanel.getX(), buttonPanel.getY() - 35);
 		resizeButton = setUpButton("Resize");
 		exitButton = setUpButton("Exit");
 
@@ -119,14 +132,14 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 			changeWindowSize();
 		} else if (source == resizable) {
 			this.setResizable(!this.isResizable());
-		} else if (source == darkMode) {
+		 } else if (source == darkMode) {
 			if (!FlatLaf.isLafDark()) {
 				FlatDarkLaf.setup();
 			} else {
 				FlatLightLaf.setup();
 			}
 
-			FlatLaf.updateUI();
+		 	FlatLaf.updateUI();
 		} else if (source == exitButton) {
 			System.exit(0);
 		}
