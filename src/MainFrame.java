@@ -56,7 +56,7 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 		setUpPanel(5).add(darkMode);
 
 		// Buttons
-		buttonPanel = setUpPanel(5);
+		buttonPanel = setUpPanel(6);
 		resizeButton = setUpButton("Resize");
 		exitButton = setUpButton("Exit");
 
