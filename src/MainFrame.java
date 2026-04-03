@@ -45,6 +45,8 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 		heightField = setUpSpinner(heightPanel, heightSize);
 		heightPanel.add(new JLabel("px (Height)"));
 
+		setUpPanel(2).add(new JLabel("Change window title"));
+
 		// Resizable checkbox
 		resizable = setUpCheckBox("Resize with mouse and maximize/restore button");
 		setUpPanel(4).add(resizable);
