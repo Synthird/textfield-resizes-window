@@ -1,5 +1,6 @@
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentEvent;
@@ -25,6 +26,10 @@ import com.formdev.flatlaf.FlatLightLaf;
 
 public class MainFrame extends JFrame implements ActionListener, ComponentListener, ChangeListener, KeyListener {
 	String originalWindowTitle = "Textfield resizes window";
+
+	Image darkModeIcon = new ImageIcon("TextfieldResizesWindowIconDarkMode.png").getImage();
+	Image lightModeIcon = new ImageIcon("TextfieldResizesWindowIconLightMode.png").getImage();
+
 	FlowLayout flowLayout = new FlowLayout(FlowLayout.LEFT);
 
 	JSpinner widthField, heightField;
@@ -77,7 +82,7 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 
 		// Window setup
 		this.setTitle(originalWindowTitle);
-		this.setIconImage((new ImageIcon("TextfieldResizesWindowIcon.png")).getImage());
+		this.setIconImage(darkModeIcon);
 		changeWindowSize();
 		this.setLayout(null);
 		this.setLocationRelativeTo(null);
@@ -136,8 +141,10 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 			this.setResizable(!this.isResizable());
 		 } else if (source == darkMode) {
 			if (!FlatLaf.isLafDark()) {
+				this.setIconImage(darkModeIcon);
 				FlatDarkLaf.setup();
 			} else {
+				this.setIconImage(lightModeIcon);
 				FlatLightLaf.setup();
 			}
 
