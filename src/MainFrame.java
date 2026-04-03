@@ -187,7 +187,11 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 	@Override
 	public void keyReleased(KeyEvent e) {
 		if (e.getSource() == changeWindowTitle) {
-			this.setTitle(changeWindowTitle.getText());
+			if (changeWindowTitle.getText().isBlank()) {
+				this.setTitle(originalWindowTitle);
+			} else {
+				this.setTitle(changeWindowTitle.getText());
+			}
 		}
 
 		if (e.getKeyCode() == 10) {
