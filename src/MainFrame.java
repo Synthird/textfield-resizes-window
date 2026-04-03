@@ -24,6 +24,7 @@ import com.formdev.flatlaf.FlatLaf;
 import com.formdev.flatlaf.FlatLightLaf;
 
 public class MainFrame extends JFrame implements ActionListener, ComponentListener, ChangeListener, KeyListener {
+	String originalWindowTitle = "Textfield resizes window";
 	FlowLayout flowLayout = new FlowLayout(FlowLayout.LEFT);
 
 	JSpinner widthField, heightField;
@@ -53,6 +54,7 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 		// Change window title textfield
 		JPanel changeWindowTitlePanel = setUpPanel(3);
 		changeWindowTitlePanel.setLocation(changeWindowTitlePanel.getX(), changeWindowTitlePanel.getY() - 15);
+		changeWindowTitle.addKeyListener(this);
 		changeWindowTitlePanel.add(changeWindowTitle);
 
 		// Resizable checkbox
@@ -74,7 +76,7 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 		exitButton = setUpButton("Exit");
 
 		// Window setup
-		this.setTitle("Textfield resizes window");
+		this.setTitle(originalWindowTitle);
 		this.setIconImage((new ImageIcon("TextfieldResizesWindowIcon.png")).getImage());
 		changeWindowSize();
 		this.setLayout(null);
@@ -184,6 +186,10 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 
 	@Override
 	public void keyReleased(KeyEvent e) {
+		if (e.getSource() == changeWindowTitle) {
+			this.setTitle(changeWindowTitle.getText());
+		}
+
 		if (e.getKeyCode() == 10) {
 			changeWindowSize();
 		}
