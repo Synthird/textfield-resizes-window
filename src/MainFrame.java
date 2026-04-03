@@ -35,7 +35,7 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 	JPanel buttonPanel;
 	JButton resizeButton, exitButton;
 
-	int widthSize = 325, heightSize = 212;
+	int widthSize = 325, heightSize = 247;
 
 	public MainFrame() {
 		// Width panel
