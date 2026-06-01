@@ -27,8 +27,8 @@ import com.formdev.flatlaf.FlatLightLaf;
 public class MainFrame extends JFrame implements ActionListener, ComponentListener, ChangeListener, KeyListener {
 	String originalWindowTitle = "Textfield resizes window";
 
-	Image darkModeIcon = new ImageIcon("DarkModeIcon.png").getImage();
-	Image lightModeIcon = new ImageIcon("LightModeIcon.png").getImage();
+	Image darkModeIcon = new ImageIcon("DarkModeIcon.png").getImage(),
+		lightModeIcon = new ImageIcon("LightModeIcon.png").getImage();
 
 	FlowLayout flowLayout = new FlowLayout(FlowLayout.LEFT);
 
@@ -40,7 +40,8 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 	JPanel buttonPanel;
 	JButton resizeButton, exitButton;
 
-	int widthSize = 325, heightSize = 247;
+	int widthSize = 325,
+		heightSize = 247;
 
 	public MainFrame() {
 		// Width panel
