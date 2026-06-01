@@ -27,8 +27,8 @@ import com.formdev.flatlaf.FlatLightLaf;
 public class MainFrame extends JFrame implements ActionListener, ComponentListener, ChangeListener, KeyListener {
 	String originalWindowTitle = "Textfield resizes window";
 
-	Image darkModeIcon = new ImageIcon("TextfieldResizesWindowIconDarkMode.png").getImage();
-	Image lightModeIcon = new ImageIcon("TextfieldResizesWindowIconLightMode.png").getImage();
+	Image darkModeIcon = new ImageIcon("DarkModeIcon.png").getImage();
+	Image lightModeIcon = new ImageIcon("LightModeIcon.png").getImage();
 
 	FlowLayout flowLayout = new FlowLayout(FlowLayout.LEFT);
 
