@@ -28,7 +28,7 @@ public class MainFrame extends JFrame implements ActionListener, ComponentListen
 	String originalWindowTitle = "Textfield resizes window";
 
 	Image darkModeIcon = new ImageIcon("TextfieldResizesWindowIconDarkMode.png").getImage();
-	Image lightModeIcon = new ImageIcon("TextfieldResizesWindowIconLightMode.png").getImage();
+	Image lightModeIcon = new ImageIcon("LightModeIcon.png").getImage();
 
 	FlowLayout flowLayout = new FlowLayout(FlowLayout.LEFT);
 
