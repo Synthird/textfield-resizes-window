@@ -20,8 +20,6 @@ You can download the latest version in the [releases page](https://github.com/Sy
 2. Open the exe file in the unzipped folder.
 3. If you get a pop-up saying the exe might be a virus, just run it anyway.
 
-This is not a virus, so it is safe to install.
-
 ### Opening the jar file (Any operating system)
 
 1. You need a JDK installed on your device to open the jar file. Here are a couple ones to choose:
