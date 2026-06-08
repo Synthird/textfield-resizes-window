@@ -45,7 +45,7 @@ If you want to download the source code of this repository, you should download 
 2. Download the [FlatLaf jar file library](https://central.sonatype.com/artifact/com.formdev/flatlaf/overview).
 3. Place the library into the lib folder.
 
-![The FlatLaf library in the lib folder.](https://github.com/user-attachments/assets/1e19ac9a-620e-46fc-9c58-f077a2368d69)
+![The FlatLaf library in the lib folder.](https://github.com/user-attachments/assets/75728e90-de47-47ac-a014-fd7b0a5d86e2)
 
 ## License
 
